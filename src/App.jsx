@@ -1,12 +1,9 @@
-import { useSignals } from '@preact/signals-react/runtime';
-
 import logo from './logo.svg';
 import Main from './Main'
 import Side from './Side';
 import './App.css';
 
 function App() {
-  useSignals();
 
   return (
     <div className="App">
