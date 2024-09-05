@@ -1,10 +1,10 @@
 import { useCustomState } from '../hooks/omniState'
 
 const Side = () => {
-    const { setClicked } = useCustomState();
+    const { toggleClicked } = useCustomState()
 
     const handleClick = () => {
-        setClicked(true);
+        toggleClicked();
     }
 
     return (

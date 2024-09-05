@@ -7,18 +7,25 @@ const ActualState = () => {
         clicked.value = newVal;
     }
 
+    const toggleClicked = () => {
+        const flipped = !clicked.value
+        clicked.value = flipped;
+    }
+
     return () => ({
+        toggleClicked,
         setClicked,
         clicked
     })
 }
 
-const useActualState = ActualState();
+export const useActualState = ActualState();
 
 export const useCustomState = () => {
-    const { clicked, setClicked } = useActualState();
+    const { clicked, setClicked, toggleClicked } = useActualState();
 
     return ({
+        toggleClicked,
         setClicked,
         clicked: clicked.value,
     })
